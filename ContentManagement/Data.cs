@@ -1,4 +1,4 @@
-﻿using ReviewRadar.Media;
+﻿using ReviewRadar.MediaContent;
 using ReviewRadar.Users;
 using System;
 using System.Collections.Generic;

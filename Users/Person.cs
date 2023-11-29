@@ -10,5 +10,10 @@ namespace ReviewRadar.Users
     {
         public string FirstName { get; set; }
         public string SecondName { get; set; }
+        public Person(string firstName, string secondName)
+        {
+            FirstName = firstName;
+            SecondName = secondName;
+        }
     }
 }

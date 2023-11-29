@@ -8,7 +8,12 @@ namespace ReviewRadar.ContentManagement
 {
     public struct Review
     {
-        public byte Rating { get; set; }
-        public string Comment {  get; set; }
+        private int _rating;
+        public int Rating
+        { 
+            readonly get => _rating;
+            set => _rating = (value >= 1 && value <= 10) ? value : throw new ArgumentOutOfRangeException();
+        }
+        public string Comment { get; set; }
     }
 }

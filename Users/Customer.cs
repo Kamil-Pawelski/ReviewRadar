@@ -2,14 +2,14 @@
 
 namespace ReviewRadar.Users
 {
-    public class Customer : IUser
+    public class Customer : User
     {
-        public int Id { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public Person Person { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public string Login { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public string Password { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public string Email { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public string PhoneNumber { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public List<Review> UserReviews { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        int Id { get; set; }
+        private static int _idCounter;
+        public Customer(Person person, string login, string password, string email, string phoneNumber) 
+            : base(person, login, password, email, phoneNumber) 
+        {
+            
+        }
     }
 }

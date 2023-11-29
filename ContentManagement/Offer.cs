@@ -1,16 +1,16 @@
-﻿using System;
+﻿using ReviewRadar.MediaContent;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using ReviewRadar.Media;
 namespace ReviewRadar.ContentManagement
 {
     public static class Offer
     {
-        public static void AddMedia(IMedia media)
+        public static void AddMedia(Media media)
         {
-            if (media == null) throw new ArgumentNullException();
+            if (media == null) throw new ArgumentNullException(nameof(media), "Argument 'media' nie może być null.");
             if (media is Book)
             {
                 //ListName.Add((book)media));
@@ -33,7 +33,7 @@ namespace ReviewRadar.ContentManagement
             }
         }
 
-        public static void RevomeMedia(IMedia media)
+        public static void RevomeMedia(MediaContent.Media media)
         {
             if (media == null) throw new ArgumentNullException();
             if (media is Book)
@@ -63,15 +63,16 @@ namespace ReviewRadar.ContentManagement
             //Zwraca wszystko lub po okreslonych filtrach
         }
 
-        public static List<IMedia> FindWithTitle()
+        public static List<MediaContent.Media> FindWithTitle()
         {
             
-            return new List<IMedia>();
+            return new List<MediaContent.Media>();
         }
 
-        public static IMedia FindWithMedia()
+        public static MediaContent.Media FindWithMedia()
         {
-            return new Book();
+            Book? book = null; //Tylko żeby pozbyć się warningów
+            return book!;
         }
     }
 }
