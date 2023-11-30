@@ -10,8 +10,6 @@ namespace ReviewRadar.MediaContent
 {
     public class Media
     {
-        private string firstName;
-        private string secondName;
 
         public string Title { get; set; }
         public Person Author { get; set; }
@@ -31,19 +29,10 @@ namespace ReviewRadar.MediaContent
             Reviews = new();
         }
 
-        public Media(string title, string firstName, string secondName, string genre, DateTime releaseDate, int rating)
-        {
-            Title = title;
-            this.firstName = firstName;
-            this.secondName = secondName;
-            Genre = genre;
-            ReleaseDate = releaseDate;
-            Rating = rating;
-        }
-
+ 
         public void AverageRating()
         {
-            Rating = Reviews.Sum(Review => Review.Rating) / Reviews.Count();
+            Rating = Reviews.Sum(Review => Review.Rating) / Reviews.Count;
 
         }
         public void AddReview(Review review)

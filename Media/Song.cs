@@ -10,8 +10,8 @@ namespace ReviewRadar.MediaContent
 {
     public class Song : Media
     {
-        public Song(string title, string firstName, string secondName, string genre, DateTime releaseDate, int rating) 
-            : base(title, firstName, secondName, genre, releaseDate, rating)
+        public Song(string title, string firstName, string secondName, string description, string genre, DateTime releaseDate)
+            : base(title, firstName, secondName, description, genre, releaseDate)
         {
         }
     }
