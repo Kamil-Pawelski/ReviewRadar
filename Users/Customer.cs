@@ -18,7 +18,7 @@ namespace ReviewRadar.Users
         {
             var media = UserReviews.Select(m => m.MediaReview);
             var currentMedia = review.MediaReview;
-            if(media)
+
             UserReviews.Add(review);
         }
 

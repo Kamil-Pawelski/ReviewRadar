@@ -8,7 +8,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Json\" />
+    <Folder Include="DataFiles\" />
   </ItemGroup>
 
 </Project>
