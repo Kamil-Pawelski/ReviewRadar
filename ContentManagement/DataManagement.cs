@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace ReviewRadar.ContentManagement
 {
-    public class Data
+    public class DataManagement
     {
         public List<Book> Books { get; set; } = new ();
         public List<Song> Songs { get; set; } = new ();
@@ -19,10 +19,9 @@ namespace ReviewRadar.ContentManagement
         public List<Customer> customers { get; set; } = new();
         public string DirectoryName { get; set; }
         
-        public Data()
+        public DataManagement()
         {
-            DirectoryName = Directory.GetParent(Directory.GetCurrentDirectory()).ToString();
-            Console.WriteLine(DirectoryName);
+   
 
         }
         public void WriteToFile()
